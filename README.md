@@ -219,6 +219,30 @@
       *ICT*ONBOARDING:OK
     ```
 
+  - ## Slave 의 현재 동작 상태 전송
+    - Slave 의 동작 상태가 변경될 경우 Master 에 알림
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+    ```
+      *ICT*SET {
+        "moduleStatus":"idle"
+      }
+    
+    ```
+    - 응답 ( Mater )
+    ```
+      *ICT*RESP:OK
+    ```
+    - Parameter
+    moduleStatus | idle | idle 상태
+    moduleStatus | iotConnected | 서버에 접속 완료 상태
+| moduleStatus | 상태         | 설명                         |
+|--------------|--------------|------------------------------|
+|              | idle         | idle 상태                   |
+|              | iotConnected | 서버에 접속 완료 상태        |
+
+
+
 
 
 
