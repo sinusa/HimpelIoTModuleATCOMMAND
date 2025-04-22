@@ -20,6 +20,7 @@
     | REQ          | Master / Slave    | 정보 요청, body는 JSON으로 정의                  |
     | SET          | Master / Slave    | 정보 설정, body는 JSON으로 정의                  |
     | RESP         | Master / Slave    | 정보 요청/설정에 대한 응답, body가 있으면 JSON으로 정의 |
+    
 
   - ### Response
     | 코드 | 설명       |
@@ -34,8 +35,52 @@
     - 메시지기 첫 prefix 부터 body 까지의 모든 데이터를 Ad
  
   - ## 메시지 포맷
+  - ### 요청
     <pre>
     ┌────────┬──────────┬───────────────┬──────────────────────┬────────────┐
     │ Prefix │ Command  │ Delimiter " " │        Body?         │  Checksum  │
     └────────┴──────────┴───────────────┴──────────────────────┴────────────┘
     </pre>
+
+  - ### 응답
+    <pre>
+    ┌────────┬──────────┬───────────────┬───---------┬───────────────────┬────────────┐
+    │ Prefix │ Command  │ Delimiter ":" │  Response  │     Body?         │  Checksum  │
+    └────────┴──────────┴───────────────┴───---------┴───────────────────┴────────────┘
+    </pre>
+
+- # 연동 규격
+  - ## 시작
+    - Slave 가 통신 가능한 상태임을 알림
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+    ```
+      *ICT*DEVICEREADY
+    ```
+    - 응답 ( Mater )
+    ```
+      *ICT*DEVICEREADY:OK
+    ```
+  - ## Mater 정보 요청
+    - Slave 가 Master 의 정보를 요청
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+    ```
+      *ICT*REQ {
+        "cmd":"deviceInfo"
+      }
+    ```
+    - 응답 ( Mater )
+    ```
+      *ICT*DEVICEREADY:OK
+    ```
+      
+
+
+
+
+
+    
+
+
+
