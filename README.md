@@ -301,7 +301,7 @@
     - Parameter
     <table>
       <tr>
-        <th rowspan="7">method</th>
+        <th rowspan="2">method</th>
         <td>set</td>
         <td>추가및 수정</td>
       </tr>
@@ -312,7 +312,7 @@
      </table>
     <table>
       <tr>
-        <th rowspan="2">week</th>
+        <th rowspan="7">week</th>
         <td>0</td>
         <td>일</td>
       </tr>
