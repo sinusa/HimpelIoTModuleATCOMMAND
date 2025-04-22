@@ -69,26 +69,26 @@ sequenceDiagram
     Note right of Slave: Slave가 시작 메시지를 전송
 
     Slave->>Master: *ICT*DEVICEREADY
-    Master->>Slave: AT*ICT*DEVICEREADY:OK
+    Master-->>Slave: AT*ICT*DEVICEREADY:OK
 
     Master->>Slave: 주기적 deviceStatus 전송
-    Slave->>Master: 주기적 deviceStatus 응답
+    Slave-->>Master: 주기적 deviceStatus 응답
 
 
     Slave->>Server: server connect 요청
-    Server->>Slave: server connect 성공 응답
+    Server-->>Slave: server connect 성공 응답
 
 
-    Slave-->>Master: moduleStatus 전송
-    Master->>Slave: moduleStatus 응답
+    Slave->>Master: moduleStatus 전송
+    Master-->>Slave: moduleStatus 응답
 
 
-    Slave-->>Master: deviceInfo 요청
-    Master->>Slave: deviceInfo 응답
+    Slave->>Master: deviceInfo 요청
+    Master-->>Slave: deviceInfo 응답
 
 
-    Slave-->>Master: deviceStatus 요청
-    Master->>Slave: deviceStatus 응답
+    Slave->>Master: deviceStatus 요청
+    Master-->>Slave: deviceStatus 응답
 
 
     Note over Slave,Master: 시작 시퀀스 완료
