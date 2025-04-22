@@ -36,7 +36,7 @@
     | NOK  | 실패 응답  |
 
   - ### Body
-    - 발신측의 Command 가 REQ, SET , RESP 인 경우 json 형태의 body 를 포함한다. body 의 마지막 데이터에 반드시 CRLF ( 0x0D, 0x0A ) 를 포함한다.
+    - 발신측의 Command 가 REQ, SET , RESP 인 경우 json 형태의 body 를 포함한다
   - ### CRLF
     - 모든 데이터의 마지막 데이터 ( Checksum 이전 ) 에 반드시 CRLF ( 0x0D, 0x0A ) 를 포함한다.
   - ### Checksum
