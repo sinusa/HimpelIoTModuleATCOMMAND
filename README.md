@@ -9,6 +9,7 @@
     | Data Bits  | 8 Bit        |
     | Flow Ctrl  | Disable      |
 
+
 - # AT COMMAND 규칙
   - ## 메시지 필드
   - ### prefix
