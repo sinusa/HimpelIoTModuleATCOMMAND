@@ -50,7 +50,10 @@
     └────────┴──────────┴───────────────┴───---------┴───────────────┴───────────────┴────────┴────────────┘
     </pre>
 
+
+
 - # 연동 규격
+  
   - ## 시작
     - Slave 가 통신 가능한 상태임을 알림
     - Slave 는 본 메시지에 대한 Master 측의 응답이 없을 경우 3초 주기로 질의하며. 응답 수신시 즉시 멈춤.
@@ -63,6 +66,8 @@
     ```
       AT*ICT*DEVICEREADY:OK
     ```
+
+
   - ## Master 의 정보 요청
     - Slave 가 Master 의 정보를 요청
     - Slave 부팅시 1회, on boarding 시 장치 등록할때 1회 요청 할 수 있음
@@ -101,6 +106,7 @@
         ]
       }
     ```
+
 
   - ## Master 의 현재 상태 정보 요청
     - Slave 가 Master 의 현재 상태 정보를 요청
@@ -146,6 +152,8 @@
       }
     ```
   
+
+
   - ## Master 의 주기적 (telemetryPeriodic) Telemetry 데이터 전송
     - Master 의 Sensor 데이터를 주기적으로 전송
     - Master 는 Slave 와 통신 가능 상태 알림 Message (*ICT*DEVICEREADY) 를 서로 나누었으면, 주기적으로 sensor data 를 Slave 로 전송, Slave 의 서버 통신 여부와 무관하게 전송 필요
@@ -172,6 +180,7 @@
     ```
       *ICT*RESP:OK
     ```
+
 
   - ## Master 의 control event 전송
     - Master 장치에서 사용자가 제어할 경우 control 상태를 Slave 로 전송
@@ -209,6 +218,7 @@
       *ICT*RESP:OK
     ```
 
+
   - ## Slave 의 on boarding 상태 진입 명령
     - 장치등록이 필요 할 경우 Master 는 Slave 로 on boarding 상태 진입 ( 장치 등록 살태 ) 명령 전송 )
     - 발신 주체 : Master
@@ -220,6 +230,7 @@
     ```
       *ICT*ONBOARDING:OK
     ```
+
 
   - ## Slave 의 현재 동작 상태 전송
     - Slave 의 동작 상태가 변경될 경우 Master 에 알림
@@ -254,6 +265,7 @@
      </table>
 
 
+
  - ## Master 로 방정보 전송
     - Mobile 에서 설정한 방정보를 Master 로 전송
     - 발신 주체 : Slave
@@ -270,6 +282,7 @@
     ```
       *ICT*RESP:OK
     ```
+
 
  - ## Master 로 스케쥴 추가/수정/삭제 정보 전송
     - Mobile 에서 설정한 방정보를 Master 로 전송
