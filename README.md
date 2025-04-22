@@ -273,95 +273,95 @@
 
 
 
- - ## Master 로 방정보 전송
-    - Mobile 에서 설정한 방정보를 Master 로 전송
-    - 발신 주체 : Slave
-    - 요청 ( Slave )
-    ```
-      *ICT*SET {
-        "id":"deviceId1",
-        "cmd":"roomName",
-        "roomName":"거실"
-      }
-    
-    ```
-    - 응답 ( Mater )
-    ```
-      *ICT*RESP:OK
-    ```
+   - ## Master 로 방정보 전송
+      - Mobile 에서 설정한 방정보를 Master 로 전송
+      - 발신 주체 : Slave
+      - 요청 ( Slave )
+      ```
+        *ICT*SET {
+          "id":"deviceId1",
+          "cmd":"roomName",
+          "roomName":"거실"
+        }
+      
+      ```
+      - 응답 ( Mater )
+      ```
+        *ICT*RESP:OK
+      ```
 
 
- - ## Master 로 스케쥴 추가/수정/삭제 정보 전송
-    - Mobile 에서 설정한 방정보를 Master 로 전송
-    - 발신 주체 : Slave
-    - 요청 ( Slave )
-    ```
-      *ICT*SET {
-        "id":"deviceId1",
-        "cmd":"schedule",
-        "schedule":{
-          "id":"1",
-          "method":"set",
-          "week":["0","1","2","3","4","5","6"],
-          "repeat":"true",
-          "time":"10:00",
-          "meridiem":"AM",
-          "control":{
-            "power":"on",
-            "mode":"auto",
-          }
-        },
-      }
-    
-    ```
-    - 응답 ( Mater )
-    ```
-      *ICT*RESP:OK
-    ```
-    - Parameter
-    <table>
-      <tr>
-        <th rowspan="2">method</th>
-        <td>set</td>
-        <td>추가및 수정</td>
-      </tr>
-      <tr>
-        <td>del</td>
-        <td>삭제</td>
-      </tr>
-     </table>
-    <table>
-      <tr>
-        <th rowspan="7">week</th>
-        <td>0</td>
-        <td>일</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>월</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>화</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>수</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>목</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>금</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>토</td>
-      </tr>
-
-    </table>
+   - ## Master 로 스케쥴 추가/수정/삭제 정보 전송
+      - Mobile 에서 설정한 방정보를 Master 로 전송
+      - 발신 주체 : Slave
+      - 요청 ( Slave )
+      ```
+        *ICT*SET {
+          "id":"deviceId1",
+          "cmd":"schedule",
+          "schedule":{
+            "id":"1",
+            "method":"set",
+            "week":["0","1","2","3","4","5","6"],
+            "repeat":"true",
+            "time":"10:00",
+            "meridiem":"AM",
+            "control":{
+              "power":"on",
+              "mode":"auto",
+            }
+          },
+        }
+      
+      ```
+      - 응답 ( Mater )
+      ```
+        *ICT*RESP:OK
+      ```
+      - Parameter
+      <table>
+        <tr>
+          <th rowspan="2">method</th>
+          <td>set</td>
+          <td>추가및 수정</td>
+        </tr>
+        <tr>
+          <td>del</td>
+          <td>삭제</td>
+        </tr>
+       </table>
+      <table>
+        <tr>
+          <th rowspan="7">week</th>
+          <td>0</td>
+          <td>일</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>월</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>화</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>수</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>목</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>금</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>토</td>
+        </tr>
+  
+      </table>
 
 
 
