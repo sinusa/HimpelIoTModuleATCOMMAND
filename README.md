@@ -234,13 +234,17 @@
       *ICT*RESP:OK
     ```
     - Parameter
-    moduleStatus | idle | idle 상태
-    moduleStatus | iotConnected | 서버에 접속 완료 상태
-| moduleStatus | 상태         | 설명                         |
-|--------------|--------------|------------------------------|
-|              | idle         | idle 상태                   |
-|              | iotConnected | 서버에 접속 완료 상태        |
-
+    <table>
+      <tr>
+        <th rowspan="2">moduleStatus</th>
+        <td>idle</td>
+        <td>idle 상태</td>
+      </tr>
+      <tr>
+        <td>iotConnected</td>
+        <td>서버에 접속 완료 상태</td>
+      </tr>
+    </table>
 
 
 
