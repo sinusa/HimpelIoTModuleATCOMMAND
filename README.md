@@ -32,7 +32,7 @@
     - 발신측의 Command 가 REQ, SET , RESP 인 경우 json 형태의 body 를 포함한다. body 의 마지막 데이터에 반드시 CRLF ( 0x0D, 0x0A ) 를 포함한다.
 
   - ### Checksum
-    - 메시지기 첫 prefix 부터 body 까지의 모든 데이터를 Ad
+    - 메시지기 첫 prefix 부터 body 까지의 모든 데이터를 Add
  
   - ## 메시지 포맷
   - ### 요청
@@ -44,9 +44,9 @@
 
   - ### 응답
     <pre>
-    ┌────────┬──────────┬───────────────┬───---------┬───────────────────┬────────────┐
-    │ Prefix │ Command  │ Delimiter ":" │  Response  │     Body?         │  Checksum  │
-    └────────┴──────────┴───────────────┴───---------┴───────────────────┴────────────┘
+    ┌────────┬──────────┬───────────────┬───---------┬───────────────┬───────────────────┬────────────┐
+    │ Prefix │ Command  │ Delimiter ":" │  Response  │ Delimiter " " │     Body?         │  Checksum  │
+    └────────┴──────────┴───────────────┴───---------┴───────────────┴───────────────────┴────────────┘
     </pre>
 
 - # 연동 규격
@@ -63,6 +63,7 @@
     ```
   - ## Mater 정보 요청
     - Slave 가 Master 의 정보를 요청
+    - Slave 부팅시 1회, on boarding 시 장치 등록할때 1회 요청 할 수 있음
     - 발신 주체 : Slave
     - 요청 ( Slave )
     ```
@@ -72,7 +73,29 @@
     ```
     - 응답 ( Mater )
     ```
-      *ICT*DEVICEREADY:OK
+      *ICT*RESP:OK {
+        "deviceInfo":
+        [
+          {
+            "id":"deviceId1",
+            "modelName":"Huevenco5",
+            "deviceFirmwareVersion":"1.0",
+            "hierarchy":"main",
+            "sensor":["temperature","humidity","voc","co2","pm25","pm10"],
+            "control":["power","airVolume","mode"],
+            "monitor":["filter","current"]
+          },
+          {
+            "id":"deviceId2",
+            "modelName":"Huevenco5",
+            "deviceFirmwareVersion":"1.0",
+            "hierarchy":"sub",
+            "sensor":["temperature","humidity","voc","co2"],
+            "control":["power"],
+            "monitor":[]
+          },
+        ]
+      }
     ```
       
 
