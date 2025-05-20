@@ -260,6 +260,32 @@ sequenceDiagram
       *ICT*RESP:OK
     ```
 
+  - ## Master 로 제어 요청 전송
+    - Master 로 제어 요청
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+    ```
+      *ICT*SET {
+        "cmd":"deviceStatus",
+        "deviceStatus":
+        [
+          {
+            "id":"deviceId1",
+            "power":"on",
+            "airVolume":"1",
+          },
+          {
+            "id":"deviceId2",
+            "power":"on",
+          }
+        ]
+      }
+    ```
+    - 응답 ( Slave )
+    ```
+      AT*ICT*RESP:OK
+    ```
+
 
   - ## Slave 의 on boarding 상태 진입 명령
     - 장치등록이 필요 할 경우 Master 는 Slave 로 on boarding 상태 진입 ( 장치 등록 살태 ) 명령 전송 )
