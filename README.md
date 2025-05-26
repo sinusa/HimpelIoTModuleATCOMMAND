@@ -424,7 +424,7 @@ sequenceDiagram
   
       </table>
 
-  - ## Master 의 히스토리 데이터 요청
+  - ## Master 의 Telemetry History 데이터 요청
     - Master 는 필요한 구간의 히스토리 데이터를 Slave 요청.
     - startTime, endTime TimeStamp 는 ms 단위
     - intervalType 은 분단위 : "min" , 일단위 "day"
@@ -434,8 +434,8 @@ sequenceDiagram
       ```
         *ICT*REQ {
           "id":"deviceId1",
-          "cmd":"history",
-          "history":{
+          "cmd":"telemetryHistory",
+          "telemetryHistory":{
             "startTime":1748179842000,
             "endTime":1748201442000,
             "key":"co2",
@@ -450,8 +450,8 @@ sequenceDiagram
       ```
         *ICT*RESP:OK {
           "id":"deviceId1",
-          "cmd":"history",
-          "history": {
+          "cmd":"telemetryHistory",
+          "telemetryHistory": {
             "co2": [
             {
               ts": 1748180292000,
