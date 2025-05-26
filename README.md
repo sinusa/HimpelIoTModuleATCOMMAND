@@ -470,6 +470,31 @@ sequenceDiagram
       }
       ```
 
+  - ## Slave 의 Weather 데이터 전송
+    - Slave 는 부팅, WiFi 연결 즉시 공공데이터 API 를 사용하여 위치기반 날씨 정보를 수신하여, Master 로 전송
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+      ```
+        *ICT*SET {
+          "cmd": "weather",
+          "weather": [
+            {
+              "fcstTime": "0600",
+              "SKY": "1",
+              "TMP": "12",
+              "TMN": "1",
+              "TMX": "13"
+            },
+            ...
+          ]
+        }
+
+      
+      ```
+      - 응답 ( Master )
+      ```
+        *ICT*RESP:OK
+      ```
 
 
 
