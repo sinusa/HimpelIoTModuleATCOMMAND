@@ -433,9 +433,9 @@ sequenceDiagram
     - 요청 ( Master )
       ```
         *ICT*REQ {
-          "id":"deviceId1",
           "cmd":"telemetryHistory",
           "telemetryHistory":{
+            "id":"deviceId1",
             "startTime":1748179842000,
             "endTime":1748201442000,
             "key":"co2",
@@ -449,9 +449,9 @@ sequenceDiagram
       - 응답 ( Slave )
       ```
         *ICT*RESP:OK {
-          "id":"deviceId1",
           "cmd":"telemetryHistory",
           "telemetryHistory": {
+            "id":"deviceId1",
             "co2": [
             {
               ts": 1748180292000,
