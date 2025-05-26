@@ -496,6 +496,23 @@ sequenceDiagram
         *ICT*RESP:OK
       ```
 
+  - ## Slave 의 시간정보 전송
+    - Slave 는 부팅, WiFi 연결, SNTP Sync 즉시 현재 시간을 Master 로 전송
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+      ```
+        *ICT*SET {
+          "cmd": "time",
+          "time": 1748272791
+        }
+
+      
+      ```
+      - 응답 ( Master )
+      ```
+        *ICT*RESP:OK
+      ```
+
 
 
 
