@@ -424,9 +424,51 @@ sequenceDiagram
   
       </table>
 
-
-
-
+  - ## Master 의 히스토리 데이터 요청
+    - Master 는 필요한 구간의 히스토리 데이터를 Slave 요청.
+    - startTime, endTime TimeStamp 는 ms 단위
+    - intervalType 은 분단위 : "min" , 일단위 "day"
+    - interval 은 intervalType "min" 일 경우 분 입력, "day" 일 경우 일 입력 
+    - 발신 주체 : Master
+    - 요청 ( Master )
+      ```
+        *ICT*REQ {
+          "id":"deviceId1",
+          "cmd":"history",
+          "history":{
+            "startTime":1748179842000,
+            "endTime":1748201442000,
+            "key":"co2",
+            "intervalType":"min",
+            "interval":15,
+            "agg":"AVG"
+          },
+        }
+      
+      ```
+      - 응답 ( Slave )
+      ```
+        *ICT*RESP:OK {
+          "id":"deviceId1",
+          "cmd":"history",
+          "history": {
+            "co2": [
+            {
+              ts": 1748180292000,
+              "value": 794.370786516854
+            },
+            {
+              "ts": 1748188392000,
+              "value": 873.2488888888889
+            },
+            {
+              "ts": 1748189292000,
+              "value": 885.2616487455197
+            }
+          ]
+        }
+      }
+      ```
 
 
 
