@@ -441,7 +441,8 @@ sequenceDiagram
             "key":"co2",
             "intervalType":"min",
             "interval":15,
-            "agg":"AVG"
+            "agg":"AVG",
+            "ts_drop":true
           },
         }
       
