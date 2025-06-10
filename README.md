@@ -363,7 +363,7 @@ sequenceDiagram
           "schedule":{
             "id":"1",
             "method":"set",
-            "week":["0","1","2","3","4","5","6"],
+            "week":[1,0,0,1,0,1,0],
             "repeat":"true",
             "time":"10:00",
             "meridiem":"AM",
