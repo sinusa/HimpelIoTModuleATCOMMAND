@@ -281,12 +281,16 @@ sequenceDiagram
           {
             "id":"deviceId3",
             "filter_reset":true
-          }
+          },
           {
             "id":"deviceId4",
             "element_reset":true
+          },
+          {
+            "id":"deviceId5",
+            "ledLevel":98,
+            "ledPower":true,  
           }
-
         ]
       }
     ```
@@ -474,7 +478,7 @@ sequenceDiagram
             {
               "ts": 1748189292000,
               "value": 885.2616487455197
-            }
+            },      
           ]
         }
       }
