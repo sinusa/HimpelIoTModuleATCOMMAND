@@ -277,7 +277,16 @@ sequenceDiagram
           {
             "id":"deviceId2",
             "power":"on",
+          },
+          {
+            "id":"deviceId3",
+            "filter_reset":true
           }
+          {
+            "id":"deviceId4",
+            "element_reset":true
+          }
+
         ]
       }
     ```
