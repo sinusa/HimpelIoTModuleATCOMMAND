@@ -157,20 +157,20 @@ sequenceDiagram
                   "range":["on","off"]
                 },
                 "airVolume":{
-                  "range":[0,1,2,3,4],
+                  "range":[1,2,3],
                   "extRange":[
                       {
                           "ventilation":[1,2,3,4]
                       },
                       {
-                          "ventilation":[1,2,3,4]
+                          "auto":[0,2,3,4]
                       },
                    ]
                 },
                 "mode"{
-                  "range":["ventilation","auto","hot"//온풍,"dryHot"//제습,"dryCool","hairDryHot","hairDryCool"]
+                  "range":["ventilation","auto","hot","dryHot","dryCool","hairDryHot","hairDryCool"]
                 },
-            "monitor":["filter","current"]
+                "monitor":["filter"]
           },
 
         ]
@@ -217,7 +217,22 @@ sequenceDiagram
             "pm25":"3",
             "pm10":"7",
             "power":"on"
-          }
+          },
+          {
+            "id":"deviceId1",
+            "temperature":"20",
+            "humidity":"40",
+            "power":"on",
+            "airVolume":"1",
+            "mode":"auto",
+            "filter":"34",
+            "ledBright":"2",
+            "ledColor":{
+                "mode":"ventilation",
+                "color":0
+            }
+          },
+
         ]
       }
     ```
@@ -279,6 +294,17 @@ sequenceDiagram
             "co2":"400",
             "pm25":"3",
             "pm10":"7",
+          },
+          {
+            "power":"on",
+            "airVolume":"1",
+            "mode":"auto",
+            "filter":"34",
+            "ledBright":"2",
+            "ledColor":{
+                "mode":"ventilation",
+                "color":0
+            }
           }
         ]
       }
