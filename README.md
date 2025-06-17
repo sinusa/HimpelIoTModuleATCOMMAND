@@ -144,7 +144,35 @@ sequenceDiagram
             "sensor":["temperature","humidity","voc","co2"],
             "control":["power"],
             "monitor":[]
-          }
+          },
+          {
+            "id":"deviceId1",
+            "modelName":"Huzentte",
+            "subModelName":"LumiSlim",
+            "deviceFirmwareVersion":"1.0",
+            "hierarchy":"main",
+            "telemetryPeriodic":"5",
+            "sensor":["temperature","humidity"],
+            "control":["power":{
+                  "range":["on","off"]
+                },
+                "airVolume":{
+                  "range":[0,1,2,3,4],
+                  "extRange":[
+                      {
+                          "ventilation":[1,2,3,4]
+                      },
+                      {
+                          "ventilation":[1,2,3,4]
+                      },
+                   ]
+                },
+                "mode"{
+                  "range":["ventilation","auto","hot"//온풍,"dryHot"//제습,"dryCool","hairDryHot","hairDryCool"]
+                },
+            "monitor":["filter","current"]
+          },
+
         ]
       }
     ```
