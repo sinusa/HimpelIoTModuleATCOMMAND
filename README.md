@@ -170,7 +170,24 @@ sequenceDiagram
                 "mode"{
                   "range":["ventilation","auto","hot","dryHot","dryCool","hairDryHot","hairDryCool"]
                 },
-                "monitor":["filter"]
+                "monitor":["filter"],
+                "led":{
+                  "range":["on","off"]
+                },
+                "ledBright":{
+                  "range":[1,2,3]
+                },
+                "ledColor":{
+                  "range":[0,1,2,3,4,5]
+                  "extRange":{
+                    {
+                        "ventilation":[0,1,2,3,4,5]
+                    }
+                  }
+                },
+                "musicVolume":[0,1,2,3,4,5],
+                "voiceVolume":[0,1,2,3,4,5],
+              }
           },
 
         ]
@@ -224,13 +241,11 @@ sequenceDiagram
             "humidity":"40",
             "power":"on",
             "airVolume":"1",
-            "mode":"auto",
+            "mode":"ventilation",
             "filter":"34",
+            "led":"on",
             "ledBright":"2",
-            "ledColor":{
-                "mode":"ventilation",
-                "color":0
-            }
+            "ledColor":0,
           },
 
         ]
@@ -296,15 +311,16 @@ sequenceDiagram
             "pm10":"7",
           },
           {
+            "id":"deviceId1",
+            "temperature":"20",
+            "humidity":"40",
             "power":"on",
             "airVolume":"1",
-            "mode":"auto",
+            "mode":"ventilation",
             "filter":"34",
+            "led":"on",
             "ledBright":"2",
-            "ledColor":{
-                "mode":"ventilation",
-                "color":0
-            }
+            "ledColor":0,
           }
         ]
       }
@@ -344,6 +360,17 @@ sequenceDiagram
             "id":"deviceId5",
             "ledLevel":98,
             "ledPower":true,  
+          },
+          {
+            "id":"deviceId1",
+            "power":"on",
+            "airVolume":"1",
+            "mode":"ventilation",
+            "filter":"34",
+            "led":"on",
+            "ledBright":"2",
+            "ledColor":0,
+
           }
         ]
       }
