@@ -461,6 +461,7 @@ sequenceDiagram
             "repeat":"true",
             "time":"10:00",
             "meridiem":"AM",
+            "hour":12,
             "control":{
               "power":"on",
               "mode":"auto",
