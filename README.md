@@ -401,7 +401,7 @@ sequenceDiagram
     ```
       *ICT*SET {
         "cmd":"moduleStatus",
-        "moduleStatus":"idle"
+        "moduleStatus":0
       }
     
     ```
@@ -413,15 +413,15 @@ sequenceDiagram
     <table>
       <tr>
         <th rowspan="3">moduleStatus</th>
-        <td>idle</td>
+        <td>0 idle</td>
         <td>idle 상태</td>
       </tr>
       <tr>
-        <td>iotConnected</td>
+        <td>1 iotConnected</td>
         <td>서버에 접속 완료 상태</td>
       </tr>
       <tr>
-        <td>onboarding</td>
+        <td>2 onboarding</td>
         <td>장치 등록 상태</td>
       </tr>
      </table>
