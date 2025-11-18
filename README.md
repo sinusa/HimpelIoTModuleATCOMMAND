@@ -168,6 +168,9 @@ sequenceDiagram
                       },
                    ]
                 },
+                "filter_reset":{
+                  "range":[true,false]
+                },
                 "heaterUsage":{
                   "range":["on","off"]
                 },
@@ -187,9 +190,6 @@ sequenceDiagram
                 "ledBright":{
                   "range":[1,2,3]
                 },
-                "filter_reset":{
-                  "range":[true,false]
-                },
                 "ledColor":{
                   "range":[0,1,2,3,4,5]
                   "extRange":{
@@ -198,8 +198,6 @@ sequenceDiagram
                     }
                   }
                 },
-                "musicVolume":[0,1,2,3,4,5],
-                "voiceVolume":[0,1,2,3,4,5],
               }
           },
 
