@@ -1,4 +1,4 @@
-# Himpel IoT Module AT COMMAND 메시지 규격
+<img width="56" height="18" alt="image" src="https://github.com/user-attachments/assets/6163e0a0-e8e9-4ef1-8d67-f8b95abf5f38" /># Himpel IoT Module AT COMMAND 메시지 규격
 
 - # 준비
   - ### UART Config
@@ -153,7 +153,8 @@ sequenceDiagram
             "hierarchy":"main",
             "telemetryPeriodic":"5",
             "sensor":["temperature","humidity"],
-            "control":["power":{
+            "control":[
+                "power":{
                   "range":["on","off"]
                 },
                 "airVolume":{
@@ -167,6 +168,9 @@ sequenceDiagram
                       },
                    ]
                 },
+                "heaterUsage":{
+                  "range":["on","off"]
+                },
                 "mode"{
                   "range":["ventilation","auto","hot","dryHot","dryCool","hairDryHot","hairDryCool"]
                 },
@@ -176,6 +180,9 @@ sequenceDiagram
                 },
                 "ledBright":{
                   "range":[1,2,3]
+                },
+                "filter_reset":{
+                  "range":[true,false]
                 },
                 "ledColor":{
                   "range":[0,1,2,3,4,5]
