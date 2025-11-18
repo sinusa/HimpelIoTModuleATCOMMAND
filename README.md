@@ -268,7 +268,7 @@ sequenceDiagram
             "id":"deviceId1",
             "power":"on",
             "airVolume":"1",
-            "error":1,
+            "error":1,  <- 하단 error code 참조
           },
           {
             "id":"deviceId2",
@@ -279,11 +279,19 @@ sequenceDiagram
     ```
     - 응답 ( Slave )
     ```
-      *ICT*RESP:OK
+      *ICT*RESP OK:0 <- 0 은 slave status info 하단표 참조 
     ```
+    - slave status info
+
+    | code | 설명       |
+    |------|------------|
+    | 0   | idle ( WiFi & 서버 접속 끊김 상태) |
+    | 1  | IoT Connected ( WiFi & 서버 접속 완료 상태) |
+    | 2  | on boarding (장치 등록 준비 혹은 진행중 상태) |
+
     - error code ( Lumi )
     
-    | numal | hex       | 설명 |
+    | code | hex       | 설명 |
     |------|------------|----|
     | 0   | 0x0001  | 필터 청소 |
     | 6  | 0x0040  | ambient temp |
