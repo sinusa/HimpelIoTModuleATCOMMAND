@@ -171,6 +171,12 @@ sequenceDiagram
                 "heaterUsage":{
                   "range":["on","off"]
                 },
+                “musicVolume”:{
+                  "range":[0,1,2,3,4,5]
+                },
+                “voiceVolume”:{
+                  "range":[0,1,2,3,4,5]
+                },
                 "mode"{
                   "range":["ventilation","auto","hot","dryHot","dryCool","hairDryHot","hairDryCool"]
                 },
