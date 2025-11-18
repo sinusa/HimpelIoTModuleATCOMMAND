@@ -282,6 +282,7 @@ sequenceDiagram
       *ICT*RESP:OK
     ```
     - error code ( Lumi )
+    
     | numal | hex       | 설명 |
     |------|------------|----|
     | 0   | 0x0001  | 필터 청소 |
