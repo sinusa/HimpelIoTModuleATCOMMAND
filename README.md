@@ -268,6 +268,7 @@ sequenceDiagram
             "id":"deviceId1",
             "power":"on",
             "airVolume":"1",
+            "error":1,
           },
           {
             "id":"deviceId2",
@@ -280,6 +281,18 @@ sequenceDiagram
     ```
       *ICT*RESP:OK
     ```
+    - error code ( Lumi )
+    | numal | hex       | 설명 |
+    |------|------------|----|
+    | 0   | 0x0001  | 필터 청소 |
+    | 6  | 0x0040  | ambient temp |
+    | 9  | 0x0200  | heaten temp |
+    | 10  | 0x0400  | 통신 에러 |
+    | 11  | 0x0800  | fan 고장 |
+    | 12  | 0x1000  | 습도 센서 에러 |
+
+
+
 
 
   - ## Master 의 control event 전송
