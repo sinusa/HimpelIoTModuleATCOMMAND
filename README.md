@@ -158,7 +158,7 @@ sequenceDiagram
                   "range":["on","off"]
                 },
                 "airVolume":{
-                  "range":[1,2,3],
+                  "range": ["1", "2", "3", "autoSmart"],
                   "extRange":[
                       {
                           "ventilation":[1,2,3,4]
@@ -197,7 +197,21 @@ sequenceDiagram
                         "ventilation":[0,1,2,3,4,5]
                     }
                   }
+                },
+                "reservationTime": {
+                  "range": [0, 1, 2, 3]
+                },
+                "diffuserDamper": {
+                  "range": [“on”,”off”]
+                },
+                "diffuserLed": {
+                  "range": [“on”,”off”]
+                },
+                "diffuserLock": {
+                  "range": [“on”,”off”]
                 }
+
+    
               }
           }
 
