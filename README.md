@@ -124,7 +124,7 @@ sequenceDiagram
     - 응답 ( Mater )
     ```
           AT*ICT*RESP:OK {
-  "deviceInfo": [
+    "deviceInfo": [
     {
       "id": "deviceId1",
       "modelName": "Huevenco5",
