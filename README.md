@@ -123,7 +123,7 @@ sequenceDiagram
     ```
     - 응답 ( Mater )
     ```
-          AT*ICT*RESP:OK {
+    AT*ICT*RESP:OK {
     "deviceInfo": [
     {
       "id": "deviceId1",
@@ -207,7 +207,8 @@ sequenceDiagram
     }
   ]
 }
-```
+
+    ```
 
   - ## Master 의 현재 상태 정보 요청
     - Slave 가 Master 의 현재 상태 정보를 요청
