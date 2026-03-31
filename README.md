@@ -123,100 +123,100 @@ sequenceDiagram
     ```
     - 응답 ( Mater )
     ```
-      AT*ICT*RESP:OK {
-        "deviceInfo":
-        [
-          {
-            "id":"deviceId1",
-            "modelName":"Huevenco5",
-            "deviceFirmwareVersion":"1.0",
-            "hierarchy":"main",
-            "telemetryPeriodic":"30",
-            "sensor":["temperature","humidity","voc","co2","pm25","pm10"],
-            "control":["power","airVolume","mode"],
-            "monitor":["filter","current"]
-          },
-          {
-            "id":"deviceId2",
-            "modelName":"Huevenco5",
-            "deviceFirmwareVersion":"1.0",
-            "hierarchy":"sub",
-            "sensor":["temperature","humidity","voc","co2"],
-            "control":["power"],
-            "monitor":[]
-          },
-          {
-            "id":"deviceId1",
-            "modelName":"Huzentte",
-            "subModelName":"LumiSlim",
-            "deviceFirmwareVersion":"1.0",
-            "hierarchy":"main",
-            "telemetryPeriodic":"5",
-            "sensor":["temperature","humidity"],
-            "control":[
-                "power":{
-                  "range":["on","off"]
-                },
-                "airVolume":{
-                  "range": ["1", "2", "3", "autoSmart"],
-                  "extRange":[
-                      {
-                          "ventilation":[1,2,3,4]
-                      },
-                      {
-                          "auto":[0,2,3,4]
-                      },
-                   ]
-                },
-                "filter_reset":{
-                  "range":[true,false]
-                },
-                "heaterUsage":{
-                  "range":["on","off"]
-                },
-                “musicVolume”:{
-                  "range":[0,1,2,3,4,5]
-                },
-                “voiceVolume”:{
-                  "range":[0,1,2,3,4,5]
-                },
-                "mode"{
-                  "range":["ventilation","auto","hot","dryHot","dryCool","hairDryHot","hairDryCool"]
-                },
-                "monitor":["filter"],
-                "led":{
-                  "range":["on","off"]
-                },
-                "ledBright":{
-                  "range":[1,2,3]
-                },
-                "ledColor":{
-                  "range":[0,1,2,3,4,5]
-                  "extRange":{
-                    {
-                        "ventilation":[0,1,2,3,4,5]
-                    }
-                  }
-                },
-                "reservationTime": {
-                  "range": [0, 1, 2, 3]
-                },
-                "diffuserDamper": {
-                  "range": [“on”,”off”]
-                },
-                "diffuserLed": {
-                  "range": [“on”,”off”]
-                },
-                "diffuserLock": {
-                  "range": [“on”,”off”]
+      AT*ICT*RESP:OK   AT*ICT*RESP:OK {
+    "deviceInfo":
+    [
+      {
+        "id":"deviceId1",
+        "modelName":"Huevenco5",
+        "deviceFirmwareVersion":"1.0",
+        "hierarchy":"main",
+        "telemetryPeriodic":"30",
+        "sensor":["temperature","humidity","voc","co2","pm25","pm10"],
+        "control":["power","airVolume","mode"],
+        "monitor":["filter","current"]
+      },
+      {
+        "id":"deviceId2",
+        "modelName":"Huevenco5",
+        "deviceFirmwareVersion":"1.0",
+        "hierarchy":"sub",
+        "sensor":["temperature","humidity","voc","co2"],
+        "control":["power"],
+        "monitor":[]
+      },
+      {
+        "id":"deviceId1",
+        "modelName":"Huzentte",
+        "subModelName":"LumiSlim",
+        "deviceFirmwareVersion":"1.0",
+        "hierarchy":"main",
+        "telemetryPeriodic":"5",
+        "sensor":["temperature","humidity"],
+        "control":[
+            "power":{
+              "range":["on","off"]
+            },
+            "airVolume":{
+              "range": ["1", "2", "3", "autoSmart"],
+              "extRange":[
+                  {
+                      "ventilation":[1,2,3,4]
+                  },
+                  {
+                      "auto":[0,2,3,4]
+                  },
+               ]
+            },
+            "filter_reset":{
+              "range":[true,false]
+            },
+            "heaterUsage":{
+              "range":["on","off"]
+            },
+            “musicVolume”:{
+              "range":[0,1,2,3,4,5]
+            },
+            “voiceVolume”:{
+              "range":[0,1,2,3,4,5]
+            },
+            "mode"{
+              "range":["ventilation","auto","hot","dryHot","dryCool","hairDryHot","hairDryCool"]
+            },
+            "monitor":["filter"],
+            "led":{
+              "range":["on","off"]
+            },
+            "ledBright":{
+              "range":[1,2,3]
+            },
+            "ledColor":{
+              "range":[0,1,2,3,4,5]
+              "extRange":{
+                {
+                    "ventilation":[0,1,2,3,4,5]
                 }
-
-    
               }
-          }
+            },
+            "reservationTime": {
+              "range": [0, 1, 2, 3]
+            },
+            "diffuserDamper": {
+              "range": [“on”,”off”]
+            },
+            "diffuserLed": {
+              "range": [“on”,”off”]
+            },
+            "diffuserLock": {
+              "range": [“on”,”off”]
+            }
 
-        ]
+
+          }
       }
+
+    ]
+  }
     ```
 
 
