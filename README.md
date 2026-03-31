@@ -206,6 +206,7 @@ sequenceDiagram
       "monitor": ["filter"]
     }
   ]
+}
 
     ```
 
