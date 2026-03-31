@@ -208,8 +208,7 @@ sequenceDiagram
     }
   ]
 }
-
-    ```
+  ```
 
   - ## Master 의 현재 상태 정보 요청
     - Slave 가 Master 의 현재 상태 정보를 요청
