@@ -24,6 +24,7 @@
     | DEVICEREADY  | Slave             | 연동 준비가 완료되었음을 알림                    |
     | FACRESET     | Master            | 모듈을 공장초기화하고, onboarding 상태로 진입     |
     | ONBOARD      | Master            | 모듈이 onboarding 상태로 진입                    |
+    | DEVICEDEL    | Master            | 서버로 Device 삭제 요청                         |
     | REQ          | Master / Slave    | 정보 요청, body는 JSON으로 정의                  |
     | SET          | Master / Slave    | 정보 설정, body는 JSON으로 정의                  |
     | RESP         | Master / Slave    | 정보 요청/설정에 대한 응답, body가 있으면 JSON으로 정의 |
