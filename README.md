@@ -206,9 +206,9 @@ sequenceDiagram
       },
       "monitor": ["filter"]
     }
-  ]
-}
-  ```
+    ]
+    }
+    ```
 
   - ## Master 의 현재 상태 정보 요청
     - Slave 가 Master 의 현재 상태 정보를 요청
@@ -367,7 +367,7 @@ sequenceDiagram
       *ICT*RESP:OK
     ```
 
-  - ## Master 로 제어 요청 전송
+  - ## Master 로 제어 요청 및 외부 센서데이터 전송
     - Master 로 제어 요청
     - 발신 주체 : Slave
     - 요청 ( Slave )
@@ -379,11 +379,11 @@ sequenceDiagram
           {
             "id":"deviceId1",
             "power":"on",
-            "airVolume":"1",
+            "airVolume":"1"
           },
           {
             "id":"deviceId2",
-            "power":"on",
+            "power":"on"
           },
           {
             "id":"deviceId3",
@@ -396,7 +396,7 @@ sequenceDiagram
           {
             "id":"deviceId5",
             "ledLevel":98,
-            "ledPower":true,  
+            "ledPower":true
           },
           {
             "id":"deviceId1",
@@ -406,8 +406,17 @@ sequenceDiagram
             "filter":"34",
             "led":"on",
             "ledBright":"2",
-            "ledColor":0,
+            "ledColor":0
 
+          },
+          {  // 외부 센서 데이터 전송
+            "id":"deviceId1",
+            "temperature":"20",
+            "humidity":"40",
+            "voc":"1000",
+            "co2":"400",
+            "pm25":"3",
+            "pm10":"7"
           }
         ]
       }
