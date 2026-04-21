@@ -473,6 +473,37 @@ sequenceDiagram
      </table>
 
 
+  - ## Slave 의 External Device 상태 전송
+    - Slave 와 연동하는 Device 의 상태를 전송 ( ex: IAQ Monitor )
+    - 발신 주체 : Slave
+    - 요청 ( Slave )
+    ```
+      *ICT*SET {
+        "cmd":"externalDevice",
+        "externalDevice": {
+          "status":1
+        }
+      }
+    
+    ```
+    - 응답 ( Mater )
+    ```
+      *ICT*RESP:OK
+    ```
+    - Parameter
+    <table>
+      <tr>
+        <th rowspan="3">externalDevice status</th>
+        <td>0</td>
+        <td>미연동 상태</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>연동 상태</td>
+      </tr>
+     </table>
+
+
 
    - ## Master 로 방정보 전송
       - Mobile 에서 설정한 방정보를 Master 로 전송
