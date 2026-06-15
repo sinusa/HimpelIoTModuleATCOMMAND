@@ -25,10 +25,12 @@
     | FACRESET     | Master            | 모듈을 공장초기화하고, onboarding 상태로 진입     |
     | ONBOARD      | Master            | 모듈이 onboarding 상태로 진입                    |
     | DEVICEDEL    | Master            | 서버로 Device 삭제 요청                         |
+    | FACTEST      | Master            | 모듈 생산 시험                                 |
     | REQ          | Master / Slave    | 정보 요청, body는 JSON으로 정의                  |
     | SET          | Master / Slave    | 정보 설정, body는 JSON으로 정의                  |
     | RESP         | Master / Slave    | 정보 요청/설정에 대한 응답, body가 있으면 JSON으로 정의 |
-    
+    | FACTEST_RESP | Slave             | 생산 검증 요청에 대한 응답 |
+
 
   - ### Response
     | 코드 | 설명       |
@@ -684,6 +686,21 @@ sequenceDiagram
       - 응답 ( Master )
       ```
         *ICT*RESP:OK
+      ```
+
+  - ## Master 의 Slave 생산 시험 요청
+    - Master 에서 Slave 로 생산 시험 요청
+    - 요청시 Slave 는 미리 지정된 AP 에 접속, Ble Client 기기와 연결완료후 Master 로 성공여부 응답을 보냄
+    - Master 의 요청과 Slave 의 응답까지 약 수초 시간이 소요될수 있음
+    - Slave 의 연결 검증이 성공이면 OK, 아니면 NOK
+    - 발신 주체 : Master
+    - 요청 ( Slave )
+      ```
+        AT*ICT*FACTEST    
+      ```
+      - 응답 ( Master )
+      ```
+        *ICT*FACTEST_RESP:OK
       ```
 
 
