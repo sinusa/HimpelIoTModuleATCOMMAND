@@ -22,7 +22,7 @@
     | 명령어       | 주체              | 설명                                              |
     |--------------|-------------------|---------------------------------------------------|
     | DEVICEREADY  | Slave             | 연동 준비가 완료되었음을 알림                    |
-    | FACRESET     | Master            | 모듈을 공장초기화하고, onboarding 상태로 진입     |
+    | FACRESET     | Master            | 모듈을 공장초기화하고     |
     | ONBOARD      | Master            | 모듈이 onboarding 상태로 진입                    |
     | DEVICEDEL    | Master            | 서버로 Device 삭제 요청                         |
     | FACTEST      | Master            | 모듈 생산 시험                                 |
